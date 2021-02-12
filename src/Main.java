@@ -34,6 +34,21 @@ public class Main {
     // iterate through a single line to count letters
     private void processLine(String line, int[] letterCounts){
         //complete this method
+        int length = line.length();
+        int ascii = 0;
+        char character = 'a';
+        //ascii = (int) character;
+        for (int i = 0; i < length; i++) {
+            character = line.charAt(i);
+            //System.out.print(character);
+
+            if (ascii >= 97 | ascii <= 122) {
+                //System.out.print(ascii);
+                //letterCounts[ascii]++;
+                 //System.out.print(letterCounts);
+            }}
+        //processLine(line);
+        //fileReader.close();
 
     }
 
@@ -42,17 +57,12 @@ public class Main {
         int letterCounts[] = new int[128];
         while (fileReader.hasNextLine()){
             String line = fileReader.nextLine();
-            int length = line.length();
-            int ascii = 0;
-            for (int i = 0; i < length; i++) {
-                char character = line.charAt(i);
-                //System.out.print(character);
-                ascii = character;
-                //System.out.print(ascii);
-                //letterCounts[ascii] = + 1;
+            if (line.isEmpty()) {
+
+            } else {
+                processLine(line, letterCounts);
             }
-            //processLine(line);
-            //fileReader.close();
+
         }
 
         //complete this method
