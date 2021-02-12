@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLOutput;
+import java.util.Locale;
 import java.util.Scanner;
 import java.io.*;
 
@@ -34,19 +36,27 @@ public class Main {
     // iterate through a single line to count letters
     private void processLine(String line, int[] letterCounts){
         //complete this method
+        line = line.toLowerCase();
         int length = line.length();
-        int ascii = 0;
-        char character = 'a';
-        //ascii = (int) character;
-        for (int i = 0; i < length; i++) {
-            character = line.charAt(i);
-            //System.out.print(character);
+        //int ascii = 0;
+        //char character = 'a';
 
-            if (ascii >= 97 | ascii <= 122) {
+        for (int i = 0; i < length; i++) {
+            char character = line.charAt(i);
+            //int ascii = character;
+            //System.out.println("Hi" + character);
+            if (Character.isLetter(character)) {
+                letterCounts[character]++;
+            }
+
+            //System.out.print(letterCounts);
+            //if (ascii >= 97 | ascii <= 122) {
                 //System.out.print(ascii);
                 //letterCounts[ascii]++;
                  //System.out.print(letterCounts);
-            }}
+            //}
+            }
+
         //processLine(line);
         //fileReader.close();
 
@@ -57,14 +67,14 @@ public class Main {
         int letterCounts[] = new int[128];
         while (fileReader.hasNextLine()){
             String line = fileReader.nextLine();
-            if (line.isEmpty()) {
-
-            } else {
+            if (!line.isEmpty()) {
                 processLine(line, letterCounts);
             }
 
         }
-
+        for (int i = 97; i < 128; i++) {
+            System.out.println(letterCounts[i]);
+        }
         //complete this method
         return letterCounts;
     }
