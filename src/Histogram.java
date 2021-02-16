@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 /**
  * Create a Histogram object based on an integer array.
  */
@@ -16,11 +18,21 @@ public class Histogram {
     private int findmax(){
         int max = data[0];
         //complete this
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] > max) {
+                max = data[i];
+            }
+        }
         return max;
     }
 
     // print the histogram
     public void print(){
         //complete this
+        int numStars = 0;
+        for (int i = 0; i <data.length; i++) {
+            //System.out.println((data[i] / 100));
+        }
+
     }
 }

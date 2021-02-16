@@ -14,14 +14,14 @@ import java.io.*;
 public class Main {
 
     // Choose a text file located in .src folder
-    private final String FILENAME = "MobyDick";
+    private final String FILENAME = "Alice";
 
     // open file and construct a scanner
     private Scanner openInputFile(){
             //complete this method
         FileInputStream myFile = null;
         try {
-            myFile = new FileInputStream("src/MobyDick.txt");
+            myFile = new FileInputStream("src/Canterbury.txt");
         }
         catch(FileNotFoundException e)
         {
@@ -43,39 +43,25 @@ public class Main {
 
         for (int i = 0; i < length; i++) {
             char character = line.charAt(i);
-            //int ascii = character;
-            //System.out.println("Hi" + character);
             if (Character.isLetter(character)) {
                 letterCounts[character]++;
             }
-
-            //System.out.print(letterCounts);
-            //if (ascii >= 97 | ascii <= 122) {
-                //System.out.print(ascii);
-                //letterCounts[ascii]++;
-                 //System.out.print(letterCounts);
-            //}
             }
-
-        //processLine(line);
-        //fileReader.close();
-
     }
 
     // read each line of file and pass to processLine to count characters
     private int[] processFile(Scanner fileReader){
+        //complete this method
         int letterCounts[] = new int[128];
         while (fileReader.hasNextLine()){
             String line = fileReader.nextLine();
             if (!line.isEmpty()) {
                 processLine(line, letterCounts);
             }
-
         }
-        for (int i = 97; i < 128; i++) {
-            System.out.println(letterCounts[i]);
-        }
-        //complete this method
+//        for (int i = 97; i < 128; i++) {
+//            System.out.println(letterCounts[i]);
+//        }
         return letterCounts;
     }
 
