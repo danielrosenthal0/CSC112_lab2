@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0e4654f-51ac-452c-9198-6b2f1480e7a3" name="Default Changelist" comment="histogram prints">
+    <list default="true" id="f0e4654f-51ac-452c-9198-6b2f1480e7a3" name="Default Changelist" comment="fixed histogram">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabProject2/Histogram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabProject2/Histogram.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabProject2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabProject2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Histogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Histogram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613060384060</updated>
-      <workItem from="1613060385315" duration="16487000" />
+      <workItem from="1613060385315" duration="18036000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1613064007187</created>
@@ -114,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613521586393</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="histogram prints">
+      <created>1613535337396</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613535337396</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +148,7 @@
     <MESSAGE value="after office hours, fixed printing blank statement and out of bounds error" />
     <MESSAGE value="working on histogram" />
     <MESSAGE value="histogram prints" />
-    <option name="LAST_COMMIT_MESSAGE" value="histogram prints" />
+    <MESSAGE value="fixed histogram" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed histogram" />
   </component>
 </project>

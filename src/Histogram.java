@@ -18,6 +18,7 @@ public class Histogram {
     private int findmax(){
         int max = data[0];
         //complete this
+        // for loop checks current number in data array, compares to max, replaces if greater
         for (int i = 0; i < data.length; i++) {
             if (data[i] > max) {
                 max = data[i];
@@ -29,16 +30,21 @@ public class Histogram {
     // print the histogram
     public void print(){
         //complete this
+        //initializing the number of stars i will need to print
         double numStars = 0;
-        //System.out.println((double)(10000/(double)(findmax())));
+        //for loop iterates through data array, divides current number in data array by the max,
+        // max is casted as a double because integer division makes a fraction and prints zero stars
+        // multiplied by 100 to get out of fraction
+        // second for loop prints a star for every current numStars
         for (int i = 0; i < data.length; i++) {
             numStars = data[i] / ((double)(findmax())) * 100;
-            //System.out.println(numStars);
             for (int j = 0; j < numStars; j++) {
                 System.out.print("*");
+                if (j == (int) numStars) {
+                    System.out.println();
+                }
             }
-            System.out.println();
         }
-        //System.out.println(findmax());
+
     }
 }

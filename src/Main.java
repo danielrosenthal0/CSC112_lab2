@@ -20,8 +20,9 @@ public class Main {
     private Scanner openInputFile(){
             //complete this method
         FileInputStream myFile = null;
+        // try and catch for file not found exception
         try {
-            myFile = new FileInputStream("src/Canterbury.txt");
+            myFile = new FileInputStream("src/MobyDick.txt");
         }
         catch(FileNotFoundException e)
         {
@@ -36,11 +37,14 @@ public class Main {
     // iterate through a single line to count letters
     private void processLine(String line, int[] letterCounts){
         //complete this method
+        // converts current line to lowercase
         line = line.toLowerCase();
-        int length = line.length();
-        //int ascii = 0;
-        //char character = 'a';
 
+        // assigns length of line to length
+        int length = line.length();
+
+        // iterates through each letter of current line, checks if it is a letter then updates the correct
+        //location in the array
         for (int i = 0; i < length; i++) {
             char character = line.charAt(i);
             if (Character.isLetter(character)) {
@@ -53,15 +57,15 @@ public class Main {
     private int[] processFile(Scanner fileReader){
         //complete this method
         int letterCounts[] = new int[128];
+
+        // while loop goes through file, checking if line has text or is empty
+        // if line has text, passes line and letterCounts to processLine method
         while (fileReader.hasNextLine()){
             String line = fileReader.nextLine();
             if (!line.isEmpty()) {
                 processLine(line, letterCounts);
             }
         }
-//        for (int i = 97; i < 128; i++) {
-//            System.out.println(letterCounts[i]);
-//        }
         return letterCounts;
     }
 
