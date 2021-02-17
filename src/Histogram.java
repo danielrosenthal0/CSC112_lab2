@@ -29,10 +29,16 @@ public class Histogram {
     // print the histogram
     public void print(){
         //complete this
-        int numStars = 0;
-        for (int i = 0; i <data.length; i++) {
-            //System.out.println((data[i] / 100));
+        double numStars = 0;
+        //System.out.println((double)(10000/(double)(findmax())));
+        for (int i = 0; i < data.length; i++) {
+            numStars = data[i] / ((double)(findmax())) * 100;
+            //System.out.println(numStars);
+            for (int j = 0; j < numStars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-
+        //System.out.println(findmax());
     }
 }
