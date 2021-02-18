@@ -14,7 +14,7 @@ import java.io.*;
 public class Main {
 
     // Choose a text file located in .src folder
-    private final String FILENAME = "Alice";
+    private final String FILENAME = "Canterbury";
 
     // open file and construct a scanner
     private Scanner openInputFile(){
@@ -22,7 +22,7 @@ public class Main {
         FileInputStream myFile = null;
         // try and catch for file not found exception
         try {
-            myFile = new FileInputStream("src/MobyDick.txt");
+            myFile = new FileInputStream("src/Canterbury.txt");
         }
         catch(FileNotFoundException e)
         {

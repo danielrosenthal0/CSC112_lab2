@@ -32,15 +32,26 @@ public class Histogram {
         //complete this
         //initializing the number of stars i will need to print
         double numStars = 0;
+        System.out.println("Histogram:");
         //for loop iterates through data array, divides current number in data array by the max,
         // max is casted as a double because integer division makes a fraction and prints zero stars
         // multiplied by 100 to get out of fraction
         // second for loop prints a star for every current numStars
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 97; i < 123; i++) {
             numStars = data[i] / ((double)(findmax())) * 100;
+            if (data[i] < 1000) {
+                System.out.print(data[i] + "      ");
+            } else if (data[i] < 10000) {
+                System.out.print(data[i] + "     ");
+            } else if (data[i] < 100000) {
+                System.out.print(data[i] + "    ");
+            } else {
+                System.out.print(data[i] + "   ");
+            }
             for (int j = 0; j < numStars; j++) {
+
                 System.out.print("*");
-                if (j == (int) numStars) {
+                if (j == (int) numStars | j == 99) {
                     System.out.println();
                 }
             }
