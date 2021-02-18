@@ -31,15 +31,19 @@ public class Histogram {
     public void print(){
         //complete this
         //initializing the number of stars i will need to print
+        // creating alphabet array to print each letter on each line
         double numStars = 0;
         char alphabet[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
                 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
         System.out.println("Histogram:");
-        //for loop iterates through data array, divides current number in data array by the max,
+        //for loop iterates through alphabet and prints, iterates through
+        // data array, divides current number in data array by the max,
         // max is casted as a double because integer division makes a fraction and prints zero stars
         // multiplied by 100 to get out of fraction
+        //if elses determine how many spaces to line up stars correctly
         // second for loop prints a star for every current numStars
+        // last if statement checks when to create a new line
             for (int i = 97; i < 123; i++) {
                 System.out.print(alphabet[i - 97] + " ");
                 numStars = data[i] / ((double) (findmax())) * 100;
